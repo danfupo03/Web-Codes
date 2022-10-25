@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  nav a {
+    text-decoration: none;
+  }
+  nav label a {
+    text-decoration: none;
+  }
+  .align {
+    justify-content: center;
+  }
+  body a {
+    text-decoration: none;
+  }
+  nav {
+    background: #1c274f;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #0b0c29;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #0a143b;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+
+  /*  ! Responsive Cards */
+  .container {
+    display: flex;
+    width: 1920px;
+    height: auto;
+    margin: 30px auto;
+  }
+  .box {
+    text-align: center;
+    width: 32%;
+    height: 470px;
+    margin-right: 1%;
+    background:  #0b0c29;
+    border-radius: 10px;
+    transition: 0.9;
+  }
+  .box:hover {
+    box-shadow: 0 0 11px black;
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  h3 {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+  }
+  p {
+    color: white;
+    font-size: 15px;
+    padding: 0 5px;
+    text-align: center;
+  }
+  @media (max-width: 800px) {
+    .container {
+      width: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    .container {
+      width: 85%;
+      display: block;
+    }
+    .box {
+      width: 100%;
+      margin-bottom: 4%;
+    }
+  }
+  
+  /* ! Foco */
+  .label {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background: #212121;
+    border-radius: 10px;
+  }
+  .label-span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .label-input {
+    appearance: none;
+  }
+  .label-input:checked ~ span {
+    left: 75px;
+  }
+  .label-span-ion_icon {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2em;
+    transition: 0.5s;
+  }
+  .label-input:checked ~ span ion-icon {
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+  }
+  .bulb {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 348px;
+    height: 408px;
+    pointer-events: none;
+    background: url(./imagenes/bulb_off.png);
+    transition: 0.5s;
+  }
+  .label-input:checked ~ .bulb {
+    background: url(./imagenes/bulb_on.png);
+  }
+  .plus {
+    color: #fff;
+    font-size: 100px;
+    padding-top: 40%;
+  }
+
+  /* ? Color picker */
+  .box-picker {
+    text-align: center;
+    width: 32%;
+    height: 250px;
+    margin-right: 1%;
+    background:  #0b0c29;
+    border-radius: 10px;
+    transition: 0.9;
+  }
+  .color-picker {
+    font-size: 50px;
+    color: #fff;
+    padding-top: 65px;
+  }
+  .input {
+    font-size: 100px;
+  }
+  @media (max-width: 600px) {
+    .box-picker {
+      width: 100%;
+      margin-bottom: 4%;
+    }
+  }
